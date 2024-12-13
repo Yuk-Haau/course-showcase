@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
   return (
-    <main className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <main className="bg-white min-h-screen flex flex-col items-center justify-center">
       <div className="w-full max-w-6xl px-4 mx-auto my-8">
         <h1 className="text-4xl font-bold text-blue-600 pt-10 text-center">
           Improving Object Pose Estimation with Line Features in Mixed Reality
@@ -25,13 +25,15 @@ export default function Home() {
           <a
             href="https://github.com/DavidSong2000/SBBTrainDoorLocolization"
             target="_blank"
-            className="inline-block text-lg text-white bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-500"
+            className="inline-block text-sm text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-500 text-center"
           >
-            <FontAwesomeIcon
-              icon={faGithub}
-              className="text-white text-xl mr-2"
-            />
-            <span>Code</span>
+            <span>
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="text-white text-xl text-center"
+              />
+              Code
+            </span>
           </a>
         </div>
 
@@ -50,6 +52,44 @@ export default function Home() {
             robustness, providing an efficient solution for real-time
             localization of SBB doors in mixed reality applications.
           </p>
+        </div>
+
+        {/* pipeline limap */}
+        <div className="mt-8 w-full px-6 py-4">
+          <h2 className="text-2xl font-bold text-gray-800 text-center">
+            Pipeline
+          </h2>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            LiMAP is a line-based feature matching algorithm that uses line
+            segments extracted from images to estimate object poses. The
+            algorithm first detects line segments in the reference and query
+            images, then matches them based on their geometric properties. By
+            calculating the transformation matrix between the two images, LiMAP
+            accurately localizes the object in the query image.
+          </p>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            GIM (Generalizable Image Matcher) is a self-supervised framework
+            designed to learn robust image matching models with strong
+            generalization capabilities from internet videos. By leveraging
+            candidate correspondences between adjacent frames and propagating
+            them to wider baselines, GIM enhances the training process for
+            improved performance in unseen scenarios. In our project, we use GIM
+            to localize SBB car doors, utilizing its ability to extract reliable
+            feature correspondences.
+          </p>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            In this project, we compare the performance of LiMAP and GIM in
+            feature matching accuracy, evaluating their robustness in localize
+            SBB train doors.
+          </p>
+          {/* pic */}
+          <div className="flex justify-center w-full">
+            <img
+              src="/course-showcase/pic/pipeline.jpg"
+              alt="LiMAP"
+              className="flex-1 rounded-lg"
+            />
+          </div>
         </div>
 
         {/* gim results */}
@@ -115,6 +155,23 @@ export default function Home() {
               </video>
             </div>
           </div>
+        </div>
+
+        {/* limap results */}
+        <div className="mt-8 w-full px-6 py-4">
+          <h2 className="text-2xl font-bold text-gray-800 text-center">
+            LiMAP Results
+          </h2>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            Our experiments show that LiMAP is effective in localizing SBB train
+            doors with high precision. The algorithm accurately estimates the
+            object pose, providing a reliable solution for mixed reality
+            applications.
+          </p>
+          <h3 className="text-1xl font-bold text-gray-800 text-center py-5">
+            SBB train door reconstruction using LiMAP
+          </h3>
+          {/* pic */}
         </div>
       </div>
     </main>
