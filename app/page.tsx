@@ -107,6 +107,28 @@ export default function Home() {
           </div>
         </div>
 
+        {/* YOLO object detection */}
+        <div className="mt-8 w-full px-6 py-4">
+          <h2 className="text-2xl font-bold text-gray-800 text-center">
+            YOLO Object Detection
+          </h2>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            In our project, we use YOLO Bouding Box to detect SBB train doors in
+            the image sequences captured by the HoloLens. By identifying the
+            doors in the images, we can extract the region of interest for
+            further processing, enabling accurate localization using LiMAP and
+            GIM.
+          </p>
+          {/* pic */}
+          <div className="flex justify-center w-full">
+            <img
+              src="/course-showcase/pic/yoloPipeline.png"
+              alt="YOLO"
+              className="flex-1 rounded-lg"
+            />
+          </div>
+        </div>
+
         {/* limap results */}
         <div className="mt-8 w-full px-6 py-4">
           <h2 className="text-2xl font-bold text-gray-800 text-center">
