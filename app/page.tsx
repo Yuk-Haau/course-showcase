@@ -100,7 +100,7 @@ export default function Home() {
           {/* pic */}
           <div className="flex justify-center w-full">
             <img
-              src="/course-showcase/pic/pipeline.jpg"
+              src="/course-showcase/pic/pipeline.png"
               alt="LiMAP"
               className="flex-1 rounded-lg"
             />
