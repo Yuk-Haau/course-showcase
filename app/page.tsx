@@ -53,8 +53,23 @@ export default function Home() {
             localization of SBB doors in mixed reality applications.
           </p>
         </div>
+        {/* videos from hololens */}
+        <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4">
+          <div className="flex justify-between w-full space-x-4">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className=" flex-1 rounded-lg"
+              src="/course-showcase/videos/web_test.mp4"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
 
-        {/* pipeline limap */}
+        {/* pipeline*/}
         <div className="mt-8 w-full px-6 py-4">
           <h2 className="text-2xl font-bold text-gray-800 text-center">
             Pipeline
@@ -92,6 +107,37 @@ export default function Home() {
           </div>
         </div>
 
+        {/* limap results */}
+        <div className="mt-8 w-full px-6 py-4">
+          <h2 className="text-2xl font-bold text-gray-800 text-center">
+            LiMAP Results
+          </h2>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            Our experiments show that LiMAP is effective in localizing SBB train
+            doors with high precision. The algorithm accurately estimates the
+            object pose, providing a reliable solution for mixed reality
+            applications.
+          </p>
+          <h3 className="text-1xl font-bold text-gray-800 text-center py-5">
+            SBB train door reconstruction using LiMAP
+          </h3>
+          {/* videos */}
+          <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4">
+            <div className="flex justify-between w-full space-x-4">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className=" rounded-lg"
+                src="/course-showcase/videos/web_limap_reconstruction.mp4"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+
         {/* gim results */}
         <div className="mt-8 w-full px-6 py-4">
           <h2 className="text-2xl font-bold text-gray-800 text-center">
@@ -108,7 +154,6 @@ export default function Home() {
           <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4">
             <div className="flex justify-between w-full space-x-4">
               <video
-                controls
                 autoPlay
                 loop
                 muted
@@ -119,7 +164,6 @@ export default function Home() {
                 Your browser does not support the video tag.
               </video>
               <video
-                controls
                 autoPlay
                 loop
                 muted
@@ -132,7 +176,6 @@ export default function Home() {
             </div>
             <div className="flex justify-between w-full space-x-4">
               <video
-                controls
                 autoPlay
                 loop
                 muted
@@ -143,7 +186,6 @@ export default function Home() {
                 Your browser does not support the video tag.
               </video>
               <video
-                controls
                 autoPlay
                 loop
                 muted
@@ -155,23 +197,6 @@ export default function Home() {
               </video>
             </div>
           </div>
-        </div>
-
-        {/* limap results */}
-        <div className="mt-8 w-full px-6 py-4">
-          <h2 className="text-2xl font-bold text-gray-800 text-center">
-            LiMAP Results
-          </h2>
-          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
-            Our experiments show that LiMAP is effective in localizing SBB train
-            doors with high precision. The algorithm accurately estimates the
-            object pose, providing a reliable solution for mixed reality
-            applications.
-          </p>
-          <h3 className="text-1xl font-bold text-gray-800 text-center py-5">
-            SBB train door reconstruction using LiMAP
-          </h3>
-          {/* pic */}
         </div>
       </div>
     </main>
