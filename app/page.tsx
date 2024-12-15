@@ -39,7 +39,7 @@ export default function Home() {
 
         {/* project overview */}
         <div className="mt-8 w-full px-6 py-4">
-          <h2 className="text-2xl font-bold text-gray-800 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 text-center">
             Project Overview
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
@@ -53,8 +53,24 @@ export default function Home() {
             localization of SBB doors in mixed reality applications.
           </p>
         </div>
+        {/* pic */}
+        <div className="flex justify-center w-full">
+          <img
+            src="/course-showcase/pic/hololens1.png"
+            alt="project overview"
+            className="flex-1 rounded-lg"
+          />
+        </div>
+        <div className="flex justify-center w-full">
+          <img
+            src="/course-showcase/pic/hololens2.png"
+            alt="project overview"
+            className="flex-1 rounded-lg"
+          />
+        </div>
+
         {/* videos from hololens */}
-        <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4">
+        <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4 mt-5">
           <div className="flex justify-between w-full space-x-4">
             <video
               autoPlay
@@ -71,7 +87,7 @@ export default function Home() {
 
         {/* pipeline*/}
         <div className="mt-8 w-full px-6 py-4">
-          <h2 className="text-2xl font-bold text-gray-800 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 text-center">
             Pipeline
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
@@ -109,7 +125,7 @@ export default function Home() {
 
         {/* YOLO object detection */}
         <div className="mt-8 w-full px-6 py-4">
-          <h2 className="text-2xl font-bold text-gray-800 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 text-center">
             YOLO Object Detection
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
@@ -131,7 +147,7 @@ export default function Home() {
 
         {/* limap results */}
         <div className="mt-8 w-full px-6 py-4">
-          <h2 className="text-2xl font-bold text-gray-800 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 text-center">
             LiMAP Results
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
@@ -140,7 +156,7 @@ export default function Home() {
             object pose, providing a reliable solution for mixed reality
             applications.
           </p>
-          <h3 className="text-1xl font-bold text-gray-800 text-center py-5">
+          <h3 className="text-2xl font-bold text-gray-800 text-center py-5">
             SBB train door reconstruction using LiMAP
           </h3>
           {/* videos */}
@@ -151,18 +167,76 @@ export default function Home() {
                 loop
                 muted
                 playsInline
-                className=" rounded-lg"
                 src="/course-showcase/videos/web_limap_reconstruction.mp4"
               >
                 Your browser does not support the video tag.
               </video>
             </div>
           </div>
+          <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4">
+            <div className="flex justify-between w-full space-x-4">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                src="/course-showcase/videos/web_limapD.mp4"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          {/* pic */}
+          <h3 className="text-2xl font-bold text-gray-800 text-center py-5">
+            LiMAP 2D-3D Line Matching Results
+          </h3>
+          <h4 className="text-xl font-bold text-gray-800 text-left py-5">
+            2D-3D Line Matching <span className="text-red-600">Without</span>{" "}
+            Bounding Box
+          </h4>
+          <div className="flex justify-center w-full">
+            <img
+              src="/course-showcase/pic/out_1736.png"
+              alt="LiMAP"
+              className="w-1/3 mr-1 "
+            />
+            <img
+              src="/course-showcase/pic/out_1736_sketch.png"
+              alt="LiMAP"
+              className="w-1/3 mr-1"
+            />
+            <img
+              src="/course-showcase/pic/out_1736_3.png"
+              alt="LiMAP"
+              className="w-1/3 "
+            />
+          </div>
+          <h4 className="text-xl font-bold text-gray-800 text-left py-5 mt-5">
+            2D-3D Line Matching <span className="text-red-600">With</span>{" "}
+            Bounding Box
+          </h4>
+          <div className="flex justify-center w-full">
+            <img
+              src="/course-showcase/pic/box_1736.png"
+              alt="LiMAP"
+              className="w-1/3 mr-1 "
+            />
+            <img
+              src="/course-showcase/pic/1736_sketch_box.png"
+              alt="LiMAP"
+              className="w-1/3 mr-1"
+            />
+            <img
+              src="/course-showcase/pic/1736_box.png"
+              alt="LiMAP"
+              className="w-1/3 "
+            />
+          </div>
         </div>
 
         {/* gim results */}
         <div className="mt-8 w-full px-6 py-4">
-          <h2 className="text-2xl font-bold text-gray-800 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 text-center">
             GIM Results
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
@@ -173,15 +247,15 @@ export default function Home() {
           </p>
 
           {/* 视频展示 */}
-          <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4">
+          <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4 mt-7">
             <div className="flex justify-between w-full space-x-4">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-1/2 rounded-lg"
-                src="/course-showcase/videos/web_warp_real1.mp4"
+                className="w-1/2"
+                src="/course-showcase/videos/web_match1.mp4"
               >
                 Your browser does not support the video tag.
               </video>
@@ -190,8 +264,8 @@ export default function Home() {
                 loop
                 muted
                 playsInline
-                className="w-1/2 rounded-lg"
-                src="/course-showcase/videos/web_warp_real2.mp4"
+                className="w-1/2"
+                src="/course-showcase/videos/web_match2.mp4"
               >
                 Your browser does not support the video tag.
               </video>
@@ -202,18 +276,18 @@ export default function Home() {
                 loop
                 muted
                 playsInline
-                className="w-1/2 rounded-lg"
-                src="/course-showcase/videos/web_output_real1.mp4"
+                src="/course-showcase/videos/web_warp1.mp4"
               >
                 Your browser does not support the video tag.
               </video>
+            </div>
+            <div className="flex justify-between w-full space-x-4">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-1/2 rounded-lg"
-                src="/course-showcase/videos/web_output_real2.mp4"
+                src="/course-showcase/videos/web_warp2.mp4"
               >
                 Your browser does not support the video tag.
               </video>
