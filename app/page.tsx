@@ -153,7 +153,7 @@ export default function Home() {
           </h3>
           {/* videos */}
           <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4">
-            <div className="flex justify-between w-full space-x-4">
+            <div className=" w-full space-x-4">
               <video
                 autoPlay
                 loop
@@ -166,7 +166,7 @@ export default function Home() {
               </video>
             </div>
 
-            <div className="flex w-full space-x-4">
+            <div className="w-full space-x-4">
               <video
                 autoPlay
                 loop
