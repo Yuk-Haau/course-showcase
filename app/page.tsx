@@ -165,8 +165,7 @@ export default function Home() {
                 Your browser does not support the video tag.
               </video>
             </div>
-          </div>
-          <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4">
+
             <div className="flex justify-between w-full space-x-4">
               <video
                 autoPlay
