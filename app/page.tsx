@@ -52,33 +52,7 @@ export default function Home() {
             localization of SBB doors in mixed reality applications.
           </p>
         </div>
-        {/* pic */}
-        <div className="flex justify-center w-full">
-          <img
-            src="/course-showcase/pic/000128_Client0_rawImage_gim_dkm_match.png"
-            alt="project overview"
-            className="w-1/2"
-          />
-          <img
-            src="/course-showcase/pic/000128_Client1_rawImage_gim_dkm_match.png"
-            alt="project overview"
-            className="w-1/2"
-          />
-        </div>
-        <div className="flex justify-center w-full">
-          <img
-            src="/course-showcase/pic/000128_Client0_rawImage_gim_dkm_warp.png"
-            alt="project overview"
-            className="flex-1"
-          />
-        </div>
-        <div className="flex justify-center w-full">
-          <img
-            src="/course-showcase/pic/000128_Client1_rawImage_gim_dkm_warp.png"
-            alt="project overview"
-            className="flex-1"
-          />
-        </div>
+
         {/* videos from hololens
         <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4 mt-5">
           <div className="flex justify-between w-full space-x-4">
@@ -142,8 +116,7 @@ export default function Home() {
             In our project, we use YOLO Bouding Box to detect SBB train doors in
             the image sequences captured by the HoloLens. By identifying the
             doors in the images, we can extract the region of interest for
-            further processing, enabling accurate localization using LiMAP and
-            GIM.
+            further processing.
           </p>
           {/* pic */}
           <div className="flex justify-center w-full">
@@ -161,10 +134,11 @@ export default function Home() {
             LiMAP Results
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
-            Our experiments show that LiMAP is effective in localizing SBB train
-            doors with high precision. The algorithm accurately estimates the
-            object pose, providing a reliable solution for mixed reality
-            applications.
+            Our experiments demonstrate that LiMAP is effective in
+            reconstructing SBB train doors. Although feature matching in
+            synthetic images is fairly good, 2D-3D line matching remains
+            challenging, particularly in real-world scenarios. Even with the use
+            of bounding boxes, the results are not as accurate as anticipated.
           </p>
           <h3 className="text-2xl font-bold text-gray-800 text-center py-5">
             SBB train door reconstruction using LiMAP
@@ -324,6 +298,46 @@ export default function Home() {
                 Your browser does not support the video tag.
               </video>
             </div>
+          </div>
+        </div>
+
+        {/* Hololens Implementation */}
+        <div className="mt-8 w-full px-6 py-4">
+          <h2 className="text-3xl font-bold text-gray-800 text-center">
+            Hololens Implementation
+          </h2>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            We implemented the GIM algorithms on the HoloLens. By leveraging the
+            HoloLens capabilities, we accurately localize SBB train doors in
+            mixed reality environments, providing a reliable solution for
+            applications in the transportation industry.
+          </p>
+          {/* pic */}
+          <div className="flex justify-center w-full">
+            <img
+              src="/course-showcase/pic/000128_Client0_rawImage_gim_dkm_match.png"
+              alt="project overview"
+              className="w-1/2"
+            />
+            <img
+              src="/course-showcase/pic/000128_Client1_rawImage_gim_dkm_match.png"
+              alt="project overview"
+              className="w-1/2"
+            />
+          </div>
+          <div className="flex justify-center w-full">
+            <img
+              src="/course-showcase/pic/000128_Client0_rawImage_gim_dkm_warp.png"
+              alt="project overview"
+              className="flex-1"
+            />
+          </div>
+          <div className="flex justify-center w-full">
+            <img
+              src="/course-showcase/pic/000128_Client1_rawImage_gim_dkm_warp.png"
+              alt="project overview"
+              className="flex-1"
+            />
           </div>
         </div>
       </div>
