@@ -48,28 +48,38 @@ export default function Home() {
             image sequences from the HoloLens, we accurately localize the doors
             with high precision. We compared LiMAP and GIM for feature matching,
             evaluating their performance in complex environments. Our findings
-            show that combining these methods enhances pose estimation
-            robustness, providing an efficient solution for real-time
+            show that GIM provides an efficient solution for real-time
             localization of SBB doors in mixed reality applications.
           </p>
         </div>
         {/* pic */}
         <div className="flex justify-center w-full">
           <img
-            src="/course-showcase/pic/hololens1.png"
+            src="/course-showcase/pic/000128_Client0_rawImage_gim_dkm_match.png"
             alt="project overview"
-            className="flex-1 rounded-lg"
+            className="w-1/2"
+          />
+          <img
+            src="/course-showcase/pic/000128_Client1_rawImage_gim_dkm_match.png"
+            alt="project overview"
+            className="w-1/2"
           />
         </div>
         <div className="flex justify-center w-full">
           <img
-            src="/course-showcase/pic/hololens2.png"
+            src="/course-showcase/pic/000128_Client0_rawImage_gim_dkm_warp.png"
             alt="project overview"
-            className="flex-1 rounded-lg"
+            className="flex-1"
           />
         </div>
-
-        {/* videos from hololens */}
+        <div className="flex justify-center w-full">
+          <img
+            src="/course-showcase/pic/000128_Client1_rawImage_gim_dkm_warp.png"
+            alt="project overview"
+            className="flex-1"
+          />
+        </div>
+        {/* videos from hololens
         <div className="flex flex-wrap justify-between w-full max-w-1xl space-y-4 mt-5">
           <div className="flex justify-between w-full space-x-4">
             <video
@@ -83,7 +93,7 @@ export default function Home() {
               Your browser does not support the video tag.
             </video>
           </div>
-        </div>
+        </div> */}
 
         {/* pipeline*/}
         <div className="mt-8 w-full px-6 py-4">
@@ -207,6 +217,28 @@ export default function Home() {
             />
             <img
               src="/course-showcase/pic/out_1736_3.png"
+              alt="LiMAP"
+              className="w-1/3 "
+            />
+          </div>
+          <h4 className="text-xl font-bold text-gray-800 text-left py-5">
+            2D-3D Line Matching <span className="text-red-600">Without</span>{" "}
+            Bounding Box{" "}
+            <span className="text-yellow-600">in Synthetic Image</span>
+          </h4>
+          <div className="flex justify-center w-full">
+            <img
+              src="/course-showcase/pic/Screenshot294.png"
+              alt="LiMAP"
+              className="w-1/3 mr-1 "
+            />
+            <img
+              src="/course-showcase/pic/294_sketch.png"
+              alt="LiMAP"
+              className="w-1/3 mr-1"
+            />
+            <img
+              src="/course-showcase/pic/294.png"
               alt="LiMAP"
               className="w-1/3 "
             />
