@@ -166,14 +166,14 @@ export default function Home() {
               </video>
             </div>
 
-            <div className="flex justify-between w-full space-x-4">
+            <div className="flex w-full space-x-4">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
                 src="/course-showcase/videos/web_limapD.mp4"
-                className="flex-1"
+                className="w-full"
               >
                 Your browser does not support the video tag.
               </video>
