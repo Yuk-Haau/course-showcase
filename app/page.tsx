@@ -43,13 +43,16 @@ export default function Home() {
             Project Overview
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
-            This project focuses on improving object pose estimation in mixed
-            reality for SBB doors by leveraging line features. Using real-time
-            image sequences from the HoloLens, we accurately localize the doors
-            with high precision. We compared LiMAP and GIM for feature matching,
-            evaluating their performance in complex environments. Our findings
-            show that GIM provides an efficient solution for real-time
-            localization of SBB doors in mixed reality applications.
+            This project explores the potential of using line features to
+            improve object pose estimation in mixed reality for SBB doors. Using
+            real-time image sequences from the HoloLens, we conducted
+            experiments to accurately match a query image with existing features
+            with high precision. We compared LiMAP and GIM as feature matching
+            methods, evaluating their performance in complex environments. Our
+            findings indicate that while line features, even after image
+            filtering, demonstrate potential, they are still outperformed by
+            GIM, which provides a more efficient solution for real-time feature
+            matching of SBB doors in mixed reality applications.
           </p>
         </div>
 
@@ -94,8 +97,8 @@ export default function Home() {
           </p>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
             In this project, we compare the performance of LiMAP and GIM in
-            feature matching accuracy, evaluating their robustness in localize
-            SBB train doors.
+            feature matching accuracy, evaluating their robustness in further
+            localization of SBB train doors.
           </p>
           {/* pic */}
           <div className="flex justify-center w-full">
@@ -135,10 +138,15 @@ export default function Home() {
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
             Our experiments demonstrate that LiMAP is effective in
-            reconstructing SBB train doors. Although feature matching in
-            synthetic images is fairly good, 2D-3D line matching remains
-            challenging, particularly in real-world scenarios. Even with the use
-            of bounding boxes, the results are not as accurate as anticipated.
+            reconstructing SBB train doors.
+          </p>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            Our experiments reveal that LiMAP with bounding boxes is still
+            insufficient for accurately localizing SBB train doors with high
+            precision. While the algorithm successfully reconstructs the line
+            features of the SBB train doors, it struggles to transfer the
+            learned features from the synthetic dataset to real-world query
+            images, regardless of whether bounding boxes are applied.
           </p>
           <h3 className="text-2xl font-bold text-gray-800 text-center py-5">
             SBB train door reconstruction using LiMAP
@@ -248,8 +256,8 @@ export default function Home() {
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
             Our experiments show that GIM outperforms well in feature matching
             accuracy. The GIM algorithm is robust to occlusion and cluttered
-            backgrounds, providing a more reliable solution for object pose
-            estimation in mixed reality applications.
+            backgrounds, providing a more reliable solution for further object
+            pose estimation in mixed reality applications.
           </p>
 
           {/* 视频展示 */}
@@ -302,6 +310,7 @@ export default function Home() {
         </div>
 
         {/* Hololens Implementation */}
+
         <div className="mt-8 w-full px-6 py-4">
           <h2 className="text-3xl font-bold text-gray-800 text-center">
             Hololens Implementation
@@ -312,8 +321,28 @@ export default function Home() {
             mixed reality environments, providing a reliable solution for
             applications in the transportation industry.
           </p>
+          <h4 className="text-xl font-bold text-gray-800 text-left py-5">
+            Hololens real-time implementation
+          </h4>
           {/* pic */}
           <div className="flex justify-center w-full">
+            <img
+              src="/course-showcase/pic/holofin1.jpg"
+              alt="project overview"
+              className="w-1/3"
+            />
+            <img
+              src="/course-showcase/pic/holofin2.jpg"
+              alt="project overview"
+              className="w-1/3"
+            />
+            <img
+              src="/course-showcase/pic/holofin3.jpg"
+              alt="project overview"
+              className="w-1/3"
+            />
+          </div>
+          <div className="flex justify-center w-full mt-5">
             <img
               src="/course-showcase/pic/000128_Client0_rawImage_gim_dkm_match.png"
               alt="project overview"
@@ -325,7 +354,7 @@ export default function Home() {
               className="w-1/2"
             />
           </div>
-          <div className="flex justify-center w-full">
+          <div className="flex justify-center w-full mt-5">
             <img
               src="/course-showcase/pic/000128_Client0_rawImage_gim_dkm_warp.png"
               alt="project overview"
