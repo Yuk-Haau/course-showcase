@@ -172,7 +172,7 @@ export default function Home() {
                 loop
                 muted
                 playsInline
-                src="/course-showcase/videos/web_limapD.mp4"
+                src="/course-showcase/videos/web_limap_d.mp4"
                 className="w-full"
               >
                 Your browser does not support the video tag.
