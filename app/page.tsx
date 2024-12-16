@@ -160,6 +160,7 @@ export default function Home() {
                 muted
                 playsInline
                 src="/course-showcase/videos/web_limap_reconstruction.mp4"
+                className="flex-1"
               >
                 Your browser does not support the video tag.
               </video>
@@ -173,6 +174,7 @@ export default function Home() {
                 muted
                 playsInline
                 src="/course-showcase/videos/web_limapD.mp4"
+                className="flex-1"
               >
                 Your browser does not support the video tag.
               </video>
