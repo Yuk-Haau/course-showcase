@@ -43,16 +43,19 @@ export default function Home() {
             Project Overview
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
-            This project explores the potential of using line features to
-            improve object pose estimation in mixed reality for SBB doors. Using
-            real-time image sequences from the HoloLens, we conducted
-            experiments to accurately match a query image with existing features
-            with high precision. We compared LiMAP and GIM as feature matching
-            methods, evaluating their performance in complex environments. Our
-            findings indicate that while line features, even after image
-            filtering, demonstrate potential, they are still outperformed by
-            GIM, which provides a more efficient solution for real-time feature
-            matching of SBB doors in mixed reality applications.
+            Object pose estimation plays a critical role in augmented reality
+            (AR) applications, particularly in environments with low-texture
+            surfaces, such as SBB train doors. This work investigates the
+            challenges of using line-based meth- ods for pose estimation under
+            domain shifts, demonstrat- ing their limitations. We introduce a
+            robust, generaliz- able approach leveraging the dense feature
+            matcher (GIM) and a pipeline incorporating YOLOv8 bounding box pre-
+            dictions and LIMAP-based line feature extraction. Our method
+            enhances feature matching in domain-shifted condi- tions and
+            provides a real-time implementation on Microsoft HoloLens,
+            demonstrating its potential for practical AR ap- plications. Results
+            shows the effectiveness of GIM for ro- bust feature matching and
+            pose estimation.
           </p>
         </div>
 
@@ -105,9 +108,19 @@ export default function Home() {
             <img
               src="/course-showcase/pic/pipeline.png"
               alt="LiMAP"
-              className="flex-1 rounded-lg"
+              className="rounded-lg w-2/3 justify-center"
             />
           </div>
+          <p className="mt-2 text-gray-500">
+            Figure 1. the top part shows the pipeline of GIM-based feature
+            matching. GIM-based method first conducts dense feature matching
+            between the refer- ence image and query images, then uses matched
+            features to real- ize image warping and pose estimation. The bottom
+            part presents the pipeline of LIMAP-based method. LIMAP-based method
+            first extracts both line features and point features, then utilizes
+            YOLO box to remove outliers. LIMAP-based method use filtered
+            features to realize localization.
+          </p>
         </div>
 
         {/* YOLO object detection */}
@@ -116,19 +129,33 @@ export default function Home() {
             YOLO Object Detection
           </h2>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
-            In our project, we use YOLO Bouding Box to detect SBB train doors in
-            the image sequences captured by the HoloLens. By identifying the
-            doors in the images, we can extract the region of interest for
-            further processing.
+            To improve the quality of feature matching, the pipeline removes
+            noisy line features outside the target object in the query image.
+            This is achieved by leveraging a bounding box proposed by YOLO . To
+            enable bounding box generation, the pipeline trains a YOLOv8
+            network. The YOLO pipeline structure is illustrated in Figure 2.
           </p>
           {/* pic */}
           <div className="flex justify-center w-full">
             <img
               src="/course-showcase/pic/yoloPipeline.png"
               alt="YOLO"
-              className="flex-1 rounded-lg"
+              className="w-2/3 rounded-lg"
             />
           </div>
+          <p className="mt-2 text-gray-500">
+            Figure 2. YOLOv8 Bouding Box Pipeline. The figure illustrates the
+            image inference process and YOLOv8 model training pipeline. The
+            query image undergoes the preprocessing and is then fed into the
+            trained YOLOv8 model. The training dataset of annotated images is
+            used to fine-tune the model through a process involv- ing model
+            training, validation and model saving. Once fine-tuned, the model
+            processes the query image by performing tasks of pre- processing,
+            model prediction, and post-processing to identify and bound relevant
+            features in the image. The resulting inference high- lights SBB door
+            areas within the query image, bounds regions around detected objects
+            and remove the uninterested areas.
+          </p>
         </div>
 
         {/* limap results */}
@@ -254,6 +281,13 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-800 text-center">
             GIM Results
           </h2>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            Generalizable Image Matcher (GIM) employ internet video to enhance
+            the robustness and generalizability in chal- lenging scenarios.
+          </p>
+          <h3 className="text-2xl font-bold text-gray-800 text-center py-5">
+            GIM Feature Matching Results
+          </h3>
           <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
             Our experiments show that GIM outperforms well in feature matching
             accuracy. The GIM algorithm is robust to occlusion and cluttered
