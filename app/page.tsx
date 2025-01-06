@@ -344,6 +344,129 @@ export default function Home() {
           </div>
         </div>
 
+        {/* GIM vs LiMAP */}
+        <div className="mt-8 w-full px-6 py-4">
+          <h2 className="text-3xl font-bold text-gray-800 text-center">
+            GIM vs LiMAP
+          </h2>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            We compare the performance of GIM and LiMAP, evaluate their
+            robustness in further localization of SBB train doors.
+          </p>
+          <h3 className="text-2xl font-bold text-gray-800 text-center py-5">
+            Quantitative evaluation results
+          </h3>
+          {/* First Table */}
+          <div className="overflow-x-auto mt-4">
+            <table className="table-auto w-full border text-black">
+              <caption className="text-lg font-bold text-gray-700 my-2">
+                Table 1. Quantitative Comparison of Localization on Synthetic
+                Dataset
+              </caption>
+              <caption className="text-l text-gray-500 my-2">
+                LIMAP-based method achieves better performance in terms of
+                translation and rotation due to the introduction of line
+                features.
+              </caption>
+              <thead>
+                <tr className="bg-gray-200">
+                  <th className="px-4 py-2 border text-black">Method</th>
+                  <th className="px-4 py-2 border text-black">
+                    Translation (m)
+                  </th>
+                  <th className="px-4 py-2 border text-black">
+                    Rotation (deg)
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="px-4 py-2 border text-black">Point-based</td>
+                  <td className="px-4 py-2 border text-black">0.082</td>
+                  <td className="px-4 py-2 border text-black">0.396</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2 border text-black">
+                    LIMAP-based [13]
+                  </td>
+                  <td className="px-4 py-2 border text-black">0.032</td>
+                  <td className="px-4 py-2 border text-black">0.145</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          {/* Second Table */}
+          <div className="overflow-x-auto mt-4">
+            <table className="table-auto w-full border text-black">
+              <caption className="text-lg font-bold text-black my-2">
+                Table 2. Comparison of Localization on Real-world Dataset
+              </caption>
+              <caption className="text-l text-gray-500 my-2">
+                x denotes that the method fails in this sequence. GIM-based
+                method realizes smaller absolute trajectory error (m) on 3
+                sequences due to its generalizability on datasets with domain
+                shift.
+              </caption>
+              <thead>
+                <tr className="bg-gray-200">
+                  <th className="px-4 py-2 border text-black">Method</th>
+                  <th className="px-4 py-2 border text-black">seq1</th>
+                  <th className="px-4 py-2 border text-black">seq2</th>
+                  <th className="px-4 py-2 border text-black">seq3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="px-4 py-2 border text-black">
+                    LIMAP-based [13]
+                  </td>
+                  <td className="px-4 py-2 border text-black">x</td>
+                  <td className="px-4 py-2 border text-black">1.368 ± 0.499</td>
+                  <td className="px-4 py-2 border text-black">0.958 ± 0.417</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2 border text-black">
+                    GIM-based [22]
+                  </td>
+                  <td className="px-4 py-2 border text-black">1.005 ± 0.473</td>
+                  <td className="px-4 py-2 border text-black">0.659 ± 0.378</td>
+                  <td className="px-4 py-2 border text-black">0.564 ± 0.346</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            Table 1 demonstrates the superiority of LIMAP-based method on
+            low-texture images such as the SBB door. The introduction of line
+            features improves the robustness of localization. Moreover, we
+            conduct experiments of LIMAP-based method on real-world datasets.
+            Table 2 show that LIMAP-based method fails on the real-world dataset
+            due to large domain shift between the reference image and the query
+            images. There are lots of mismatched line features even with the
+            help of YOLO bounding box. However, the GIM-DKM model can realize
+            more accurate feature matching and stable localization on datasets
+            with large domain shift, as shown in Table 2.
+          </p>
+          <h3 className="text-2xl font-bold text-gray-800 text-center py-5">
+            Qualitative Comparisons of Trajectory Estimation
+          </h3>
+          {/* pic */}
+          <div className="flex justify-center w-full">
+            <img
+              src="/course-showcase/pic/IMG_8188.png"
+              alt="GIM vs LiMAP"
+              className="w--full flex-1"
+            />
+          </div>
+          <p className="text-lg text-gray-700 mt-4 max-w-full text-left">
+            Given the reference image from synthetic dataset and a sequence of
+            real-world images, GIM-based method is able to realize stable
+            feature matching and more accurate pose estimation. LIMAP-based
+            method fails to achieve accurate point and line feature matching due
+            to large domain shift, thus leading to the failure on all sequences
+          </p>
+        </div>
+
         {/* Hololens Implementation */}
 
         <div className="mt-8 w-full px-6 py-4">
